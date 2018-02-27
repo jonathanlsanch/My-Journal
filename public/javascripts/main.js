@@ -5,12 +5,3 @@ AOS.init({
 $(window).on('load', function () {
     AOS.refresh();
 });
-
-
-
-
-//   $(function() {
-//     AOS.init({
-//         // duration: 1200,
-//       });
-//   });
