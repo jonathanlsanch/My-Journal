@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6 centered-form">
+        <form action="/journals" method="post">
+          <div class="form-group">
+              <label for="date">Today's Date</label>
+              <input type="date" name="date" class="form-control">
+            </div>
+          <div class="form-group">
+              <label for="feeling">How Do You Feel?</label><br>
+              <select name="feeling" id="feeling">
+                <% types.forEach((feeling) => { %>
+                  <option type="text" value="<%= feeling %>" class="form-control"><%= feeling %></option>
+                <%  }) %>
+              </select>
+            </div>
+          <div class="form-group">
+            <label for="entry">Journal Entry</label>
+            <textarea id="entry" name="entry" class="form-control"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Create Journal Entry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

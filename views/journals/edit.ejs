@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6 centered-form">
+        <form action="/journals/<%= journal._id %>" method="post">
+          <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" name="date" class="form-control" value="<%= journal.inputFormattedDate %>">
+            </div>
+          <div class="form-group">
+            <label for="entry">Journal Entry</label>
+            <textarea
+              id="entry"
+              name="entry"
+              class="form-control">
+              <%= journal.entry %>
+            </textarea>
+          </div>
+          <div class="form-group">
+            <label for="feeling">How Do You Feel?</label><br>
+            <select name="feeling" id="feeling">
+              <% types.forEach((feeling) => { %>
+              <!-- This selects the journal's feeling in the dropdown -->
+                <% if (feeling === journal.feeling) { %>
+                  <option
+                    selected
+                    type="text"
+                    value="<%= feeling %>"
+                    class="form-control">
+                  <%= feeling %>
+                  </option>
+                <% } else { %>
+                  <option type="text" value="<%= feeling %>" class="form-control"><%= feeling %></option>
+                <% } %>
+              <%  }) %>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit">Update Journal Entry</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<% if (typeof(errors) !== 'undefined') { %>
+    <div class="alert alert-danger">
+        <ul>
+            <% for (let error in errors) { %>
+                <li><% errors[error].message %></li>    
+            <% } %>
+        </ul>
+    </div>
+<% } %>
