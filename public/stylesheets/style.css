@@ -2,10 +2,23 @@
   font-family: 'Rubik', serif;
 }
 
+
 .btn-logout {
   color: black;
-  padding: 15px;
+  padding: 10px;
   border: 0;
+  font-size: 1em;
+}
+
+.first-container {
+  margin-bottom: 5%;
+  margin-top: 10%;
+  padding: 2%;
+}
+
+.second-container {
+  background: rgba(208, 176, 245, 0.5);
+  padding: 2%;
 }
 
 .btn-logout:hover {
@@ -16,28 +29,50 @@
   margin-top: 3%;
 }
 
+.navbar {
+  padding: 3%;
+  font-size: 1.5em;
+}
+
 .large {
   background: #fff;
   width: 100vw;
   height: 100vh;
   padding: 50px;
-  border: 22px solid #494242;
-  line-height: 1.1;
+  border: 20px solid #494242;
+  line-height: 1.5;
   overflow: auto;
-  background-image: url("../video/Abstract-background-018-HQ.jpg");
+  background-image: url("../video/abstract-pink-geomteric-background-by-Vexels (1).png");
   background-size:cover;
+  background-repeat: no-repeat;
   background-position:center;
-}
 
+}
 
 .header-font{
   color: black;
+}
+
+.second-header-font{
+  color: black;
+  font-size: 5em;
+}
+
+.third-header-font{
+  color: black;
+  font-size: 5em;
 }
 
 .header-dot{
   color: #0243f7;
   font-size: 100px;
 }
+
+.second-header-dot{
+  color: #8A51B7;
+  font-style: bold;
+}
+
 
 .login-dot{
   color: #0bb200;
@@ -78,9 +113,9 @@ p{
 
 .login-btn:hover {
   margin-top: 3%;
-  background-color: #164faf;
+  background-color: #bb86ac;
   padding: 10px 30px;
-  border-color: #164faf;
+  border-color: #bb86ac;
 }
 
 .login-page-btn {
