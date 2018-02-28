@@ -1,17 +1,11 @@
 <div class="journal-container">
+    <h2><%= journal.date %></h2>
   <div class="journal-center">
-    <div class="row">
-      <div class="col-sm-10">
-          <h2><%= journal._creator.username %>'s Journal Entry</h2>
-        <p><%= journal.date %></p>
-        <h2 class="journal-feeling">FEELING: <%= journal.feeling %></h2>
+      <div class="journal-show">
+        <h2 class="journal-feeling">today i felt: <%= journal.feeling %></h2>
         <p class="journal-entry"><%= journal.entry %></p>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <img class="journal-image" src="<%= journal.image %>">
-      </div>
 
     </div>
     <a href="/index">Return to Entries</a>

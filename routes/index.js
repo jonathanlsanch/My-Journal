@@ -3,7 +3,7 @@ var router = express.Router();
 const Journal = require('../models/journal');
 const { ensureLoggedIn } = require('connect-ensure-login');
 
-/* GET home page. */
+/* GET index page. */
 router.get('/', ensureLoggedIn('/login'), function(req, res, next) {
   Journal
     // Retrieve all existing journals
@@ -13,5 +13,8 @@ router.get('/', ensureLoggedIn('/login'), function(req, res, next) {
       res.render('index', { journals });
     });
 });
+
+
+
 
 module.exports = router;

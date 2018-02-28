@@ -46,6 +46,8 @@ router.get('/:id', (req, res, next) => {
     });
 });
 
+
+
 // Display Edit Journal Form
 router.get('/:id/edit', 
     ensureLoggedIn('/login'),

@@ -1,29 +1,26 @@
+
 <div class="container-fluid">
   <div class="home-heading text-center row">
     <div class="home-heading-wrapper">
-        <% journals.forEach((journal, index) => { %>
-          <% if (index === 0) { %>
-            <span class="index-header-font"><%= journal._creator.username %>'s journal<span class="header-dot">.</span></span>
-          <% } %>
-    <%  }) %>
+
+            <span class="index-header-font">my journal<span class="header-dot">.</span></span>
+
           </div>
 
-  <div class="text-center">
-      <a href="/journals/new" class="new-btn" role="button">New Journal Entry</a>
-    </div>
-  
+          <a href="/journals/new" class="new-btn" role="button">New Journal Entry</a>
   <div class="journal-row row">
       <% journals.forEach((journal) => { %>
         <div class="col-sm-3 home-journal-box">
-          <img src="<%= journal.image %>">
+          <br>
           <div class="journal-info-wrapper journal-box">
-            <a class="title" href="/journals/<%= journal._id %>">
-              <span class="light-text entry"><%= journal.date %></span>
+            <a role="button" href="/journals/<%= journal._id %>">
+              <span><%= journal.date %></span>
             </a> 
             
           </div>
         </div>
       <%  }) %>
     </div>
+
 </div>
 </div>
