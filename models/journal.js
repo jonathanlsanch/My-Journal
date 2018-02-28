@@ -15,4 +15,8 @@ JournalSchema.virtual('inputFormattedDate').get(function() {
     return moment(this.date).format('YYYY-MM-DD');
 });
 
+JournalSchema.methods.belongsTo = function(user){
+    return this._creator.equals(user._id);
+  }
+
 module.exports = mongoose.model('Journal', JournalSchema);

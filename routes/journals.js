@@ -1,8 +1,9 @@
-const express   = require('express');
-const Journal  = require('../models/journal');
-const TYPES     = require('../models/emotions');
-const router    = express.Router();
-const { ensureLoggedIn } = require('connect-ensure-login');
+const express               = require('express');
+const Journal               = require('../models/journal');
+const TYPES                 = require('../models/emotions');
+const router                = express.Router();
+const { ensureLoggedIn }    = require('connect-ensure-login');
+const authorizeJournal      = require('../middleware/journal-authorization');
 
 // Display Form to Create Journal
 router.get('/new', (req, res) => {
@@ -43,7 +44,10 @@ router.get('/:id', (req, res, next) => {
 });
 
 // Display Edit Journal Form
-router.get('/:id/edit', ensureLoggedIn('/login'), (req, res, next) => {
+router.get('/:id/edit', 
+    ensureLoggedIn('/login'),
+    authorizeJournal,
+    (req, res, next) => {
     Journal.findById(req.params.id, (err, journal) => {
         if (err)        { return next(err) }
         if (!journal)  { return next(new Error("404")) }
@@ -52,7 +56,10 @@ router.get('/:id/edit', ensureLoggedIn('/login'), (req, res, next) => {
 });
 
 // Handle Edit Journal Form Submission
-router.post('/:id', ensureLoggedIn('/login'), (req, res, next) => {
+router.post('/:id',
+    ensureLoggedIn('/login'),
+    authorizeJournal,
+    (req, res, next) => {
     const updates = {
         entry: req.body.entry,
         feeling: req.body.feeling,
