@@ -200,3 +200,34 @@ p{
   text-align: center;
 
 }
+
+/* index page */
+
+.index-header-font{
+  color: black;
+  font-size: 5em;
+}
+
+.new-btn {
+  margin-top: 2%;
+  background-color: #AFCA9D;
+  padding: 10px 30px;
+  border-color: #AFCA9D;
+  border-radius: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a:hover{
+  text-decoration: none;
+  color: #0A153B;
+}
+
+.journal-box {
+  background: rgba(209, 209, 209, 0.5);
+}
+
+

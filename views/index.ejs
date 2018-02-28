@@ -1,30 +1,29 @@
 <div class="container-fluid">
   <div class="home-heading text-center row">
     <div class="home-heading-wrapper">
-      <h1>My Journal</h1>
-      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. 
-        Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p> -->
-    </div>
-  </div>
-</div>
-<br>
-  <div class="text-center">
-    <a href="/journals/new" class="text-center">New Journal Entry</a>
-  </div>
-<div class="journal-row row text-center">
+        <% journals.forEach((journal, index) => { %>
+          <% if (index === 0) { %>
+            <span class="index-header-font"><%= journal._creator.username %>'s journal<span class="header-dot">.</span></span>
+          <% } %>
+    <%  }) %>
+          </div>
 
-  <% journals.forEach((journal) => { %>
-    <div class="col-sm-3 home-journal-box">
-      <img src="<%= journal.image %>">
-      <div class="journal-info-wrapper">
-          <span class="light-text"><%= journal._creator.username %></span><br>
-        <a class="title" href="/journals/<%= journal._id %>">
-          <span class="light-text entry"><%= journal.date %></span>
-        </a> 
-        
-        <span class="light-text entry"><%= journal.entry %></span>
-      </div>
+  <div class="text-center">
+      <a href="/journals/new" class="new-btn" role="button">New Journal Entry</a>
     </div>
-  <%  }) %>
+  
+  <div class="journal-row row">
+      <% journals.forEach((journal) => { %>
+        <div class="col-sm-3 home-journal-box">
+          <img src="<%= journal.image %>">
+          <div class="journal-info-wrapper journal-box">
+            <a class="title" href="/journals/<%= journal._id %>">
+              <span class="light-text entry"><%= journal.date %></span>
+            </a> 
+            
+          </div>
+        </div>
+      <%  }) %>
+    </div>
+</div>
 </div>
