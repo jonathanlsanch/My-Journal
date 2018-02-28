@@ -274,14 +274,12 @@ a:hover{
   height: 40.5rem;
   perspective: 70rem;
 }
-
 .form-class{
   width: 380px;
   height: 360px;
   text-align: center;
   margin: 0 auto;
 }
-
 .page {
   top: 0.25rem;
   left: 0.25rem;
@@ -398,7 +396,6 @@ a {
 	-moz-transition: color 0.3s, border-color 0.3s;
 	transition: color 0.3s, border-color 0.3s;
 }
-
 .btn:hover {
 	border-color: #16a085;
 	color: #16a085;
@@ -424,10 +421,8 @@ a {
 }
 
 /* ///////////////////////////////////////////////////
-
 HARDCOVER
 Table of Contents
-
 1. container
 2. background & color
 3. opening cover, back cover and pages
@@ -438,7 +433,6 @@ Table of Contents
 	- Ribbon
 	- Figcaption
 7. mini-reset
-
 /////////////////////////////////////////////////////*/
 
 /*
@@ -460,6 +454,20 @@ Table of Contents
 /*
 	2. background & color
 */
+/*
+  3. opening cover, back cover and pages
+*/
+/* FRONT COVER TEXT */
+.coucou {
+  -webkit-transform:rotateY(360deg) !important;
+  -moz-transform:rotateY(360deg) !important;
+  -o-transform:rotateY(360deg) !important;
+  -ms-transform:rotateY(360deg) !important;
+  font-size: 5em;
+}
+
+
+
 
 /* HARDCOVER FRONT */
 .hardcover_front li:first-child {
@@ -1059,6 +1067,4 @@ figcaption p {
 		font-size: 90%;
 	}
 }
-
-
 
