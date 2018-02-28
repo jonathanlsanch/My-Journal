@@ -19,8 +19,8 @@ JournalSchema.methods.belongsTo = function(user){
   }
 
 // Date Formatting
-JournalSchema.virtual('inputFormattedDate').get(function(){
-    return (this.date).format('YYYY-MM-DD');
-  });
+// JournalSchema.virtual('inputFormattedDate').get(function(){
+//     return (this.date).format('YYYY-MM-DD');
+//   });
 
 module.exports = mongoose.model('Journal', JournalSchema);

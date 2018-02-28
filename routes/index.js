@@ -8,6 +8,7 @@ router.get('/', ensureLoggedIn('/login'), function(req, res, next) {
   Journal
     // Retrieve all existing journals
     .find({_creator: req.user._id})
+    .sort({date: -1})
     .populate('_creator')
     .exec((err, journals) => {
       res.render('index', { journals });

@@ -1,26 +1,56 @@
 
-        <div class="book">
-                <span class="page turn"></span>
-                <span class="page turn"></span>
-                <span class="page turn"></span>
-                <span class="page turn"></span>
-                <span class="page turn"></span>
-                <span class="page turn"></span>
-                <span class="cover"></span>
-                <span class="page"></span>
-                <span class="cover turn"><br>
-                        <form action="/login" method="post" class="form-class">
-                            <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" name="username" class="form-control">
+
+    <div class="component">
+        <ul class="align">
+            <li>
+                <figure class='book'>
+
+                    <!-- Front -->
+
+                    <ul class='hardcover_front'>
+                        <li>
+                            <div class="coverDesign blue">
                             </div>
-                
-                            <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control">
-                            </div>
-                
-                            <button class="btn btn-primary login-page-btn" type="submit">Login</button>
-                        </form>
-                </span>
-              </div>
+                        </li>
+                        <li></li>
+                    </ul>
+
+                    <!-- Pages -->
+
+                    <ul class='page'>
+                        <li></li>
+                        <li>
+                            <br>
+                            <br>
+                                <form action="/login" method="post" class="form-class">
+                                    <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" class="form-control">
+                                    </div>
+                        
+                                    <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" class="form-control">
+                                    </div>
+                                    <button type="submit">Login</button>
+                                </form>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+
+                    <!-- Back -->
+
+                    <ul class='hardcover_back'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </figure>
+            </li>
+        </ul>
+    </div>

@@ -66,7 +66,7 @@ router.post('/:id',
     const updates = {
         entry: req.body.entry,
         feeling: req.body.feeling,
-        date: req.body.date
+        // date: req.body.date
     };
 
     Journal.findByIdAndUpdate(req.params.id, updates, (err, journal) => {
