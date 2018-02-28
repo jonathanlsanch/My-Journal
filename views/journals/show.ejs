@@ -1,10 +1,9 @@
-<div class="container journal-container">
+<div class="journal-container">
+  <div class="journal-center">
     <div class="row">
-      <div class="col-sm-2">
-        By: <strong><%= journal._creator.username %></strong>
-      </div>
       <div class="col-sm-10">
-        <h1><%= journal.date %></h1>
+          <h2><%= journal._creator.username %>'s Journal Entry</h2>
+        <p><%= journal.date %></p>
         <h2 class="journal-feeling">FEELING: <%= journal.feeling %></h2>
         <p class="journal-entry"><%= journal.entry %></p>
       </div>
@@ -14,5 +13,8 @@
         <img class="journal-image" src="<%= journal.image %>">
       </div>
 
+    </div>
+    <a href="/index">Return to Entries</a>
+    <a href="/edit">Edit Entry</a>
     </div>
   </div>

@@ -184,3 +184,19 @@ p{
    margin-left: -150px;
    margin-top: -150px;
 }
+
+/* show page */
+
+.journal-container {
+  text-align: center;
+  padding: 10%;
+}
+
+.journal-center {
+  margin: 0 auto;
+  width: 70%;
+  background: rgba(209, 209, 209, 0.5);
+  padding: 10%;
+  text-align: center;
+
+}
