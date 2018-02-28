@@ -14,6 +14,10 @@
   /* border-color: rgba(133, 131, 170, 0.5); */
 }
 
+#entry {
+  height: 220px;
+  width: 350px;
+}
 
 
 .btn-logout {
