@@ -2,11 +2,11 @@
   font-family: 'Rubik', serif;
 }
 
-#entry {
+/* journal entry text area size */
+#entry { 
   height: 220px;
   width: 350px;
 }
-
 
 .btn-logout {
   color: black;
@@ -94,7 +94,7 @@
 }
 
 .signup-dot{
-  color: #fca714;
+  color: #8c95b0;
   font-size: 100px;
 }
 
@@ -140,36 +140,55 @@ p{
   text-align: center;
 }
 
-.edit-btn1 {
-  font-size: 2em;
-  background-color: #C88874;
+.delete-btn {
+  font-size: 1em;
+  background-color: #db4a34;
   padding: 5px 20px;
-  border-color: #C88874;
+  border-color: #db4a34;
+  border-radius: 10px;
+	color: white;
+	margin-top: 20px;
+}
+
+.delete-btn:hover {
+  font-size: 1em;
+  background-color: #b52917;
+  padding: 5px 20px;
+  border-color: #b52917;
+  border-radius: 10px;
+	color: white;
+	margin-top: 20px;
+}
+
+/* .edit-btn1 {
+  font-size: 1em;
+  background-color: #687cb7;
+  padding: 5px 20px;
+  border-color: #687cb7;
   border-radius: 10px;
   color: white;
-  margin-bottom: 20px;
 }
 
 .edit-btn1:hover {
-  background-color: #9e6655;
+  background-color: #516399;
   padding: 5px 20px;
-  border-color: #9e6655;
+  border-color: #516399;
   color: white;
-}
+} */
 
 .edit-btn {
-  font-size: 2em;
-  background-color: #635550;
+  font-size: 1em;
+  background-color: #687cb7;
   padding: 5px 20px;
-  border-color: #635550;
+  border-color: #687cb7;
   border-radius: 10px;
   color: white;
 }
 
 .edit-btn:hover {
-  background-color: #826258;
+  background-color: #516399;
   padding: 5px 20px;
-  border-color: #826258;
+  border-color: #516399;
   color: white;
 }
 
@@ -249,16 +268,16 @@ p{
 
 .signup-btn {
   margin-top: 2%;
-  background-color: #efa545;
+  background-color: #8c95b0;
   padding: 10px 30px;
-  border-color: #efa545;
+  border-color: #8c95b0;
 }
 
 .signup-btn:hover {
   margin-top: 2%;
-  background-color: #f78f11;
+  background-color: #6886e2;
   padding: 10px 30px;
-  border-color: #f78f11;
+  border-color: #6886e2;
 }
 
 .logback-btn {

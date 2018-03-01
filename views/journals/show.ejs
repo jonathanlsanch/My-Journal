@@ -1,9 +1,10 @@
 <div class="collapse navbar-collapse" id="home-nav">
-    <ul class="nav navbar-nav navbar-right">
-            <form action="/logout" method="POST">
-                <button class="btn btn-link btn-logout" type="submit">logout</button>
-            </form>
-    </div>
+        <ul class="nav navbar-nav navbar-right">
+                <form action="/logout" method="POST">
+                    <button class="btn btn-link btn-logout" type="submit">logout</button>
+                    <span><a href="/index">back to entries</a></span>
+                </form>
+</div>
 <div class="journal-container">
     <h2><%= journal.date %></h2>
   <div class="journal-center">
@@ -13,10 +14,11 @@
       </div>
     </div>
 
-  
     <div class="edit-div">
-    <a href="/index" role="button" class="edit-btn1">Return to Entries</a>
     <a href="<%= journal._id %>/edit" role="button" class="edit-btn">Edit</a>
     </div>
 
+    <form action="/journals/<%= journal._id %>/delete" method="POST">
+        <button class="delete-btn" type="submit">Delete Entry</button>
+      </form>
     </div>

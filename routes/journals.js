@@ -46,6 +46,17 @@ router.get('/:id', (req, res, next) => {
     });
 });
 
+// Delete
+
+router.post('/:id/delete', (req, res, next) => {
+    const id = req.params.id;
+  
+    Journal.findByIdAndRemove(id, (err, product) => {
+      if (err){ return next(err); }
+      return res.redirect('/index');
+    });
+  
+  });
 
 
 // Display Edit Journal Form
