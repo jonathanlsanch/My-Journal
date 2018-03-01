@@ -28,11 +28,14 @@ router.get("/search", (req, res, next) => {
       });
   });
 
+
 // Select and filter Month journal entries
 router.get("/month-select", (req, res) => {
     const searchTerm = req.query.monthSearch;
+    const month = req.query.value;
     Journal
-        .find({$where : 'return this.date.getMonth() == 2'})
+        .find({$where : 'return this.date.getMonth() == 0'})
+        // .find(monthSearch)
         .exec()
         .then((searchResults) => {
             res.locals.listResults = searchResults;
