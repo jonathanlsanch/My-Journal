@@ -134,6 +134,48 @@ p{
   color: black;
 }
 
+.form-class-login{
+  font-size: 1.5em;
+  color: black;
+}
+
+.edit-btn1 {
+  font-size: 2em;
+  background-color: #C88874;
+  padding: 5px 20px;
+  border-color: #C88874;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.edit-btn1:hover {
+  background-color: #9e6655;
+  padding: 5px 20px;
+  border-color: #9e6655;
+  color: white;
+}
+
+.edit-btn {
+  font-size: 2em;
+  background-color: #635550;
+  padding: 5px 20px;
+  border-color: #635550;
+  border-radius: 10px;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #826258;
+  padding: 5px 20px;
+  border-color: #826258;
+  color: white;
+}
+
+.edit-div {
+  margin-top: 4%;
+}
+
 .login-btn {
   font-size: 30px;
   background-color: #C88874;
@@ -148,6 +190,23 @@ p{
   background-color: #a36d5d;
   padding: 10px 30px;
   border-color: #a36d5d;
+  color: white;
+}
+
+.login-btn-2 {
+  font-size: 1em;
+  background-color: #8C95B0;
+  padding: 10px 30px;
+  border-color: #8C95B0;
+  border-radius: 10px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.login-btn-2:hover {
+  background-color: #AAAAAA;
+  padding: 10px 30px;
+  border-color: #AAAAAA;
   color: white;
 }
 
@@ -451,6 +510,10 @@ Table of Contents
 	transform-style: preserve-3d;
 }
 
+.form-group {
+  width: 95%;
+}
+
 /*
 	2. background & color
 */
@@ -464,6 +527,14 @@ Table of Contents
   -o-transform:rotateY(360deg) !important;
   -ms-transform:rotateY(360deg) !important;
   font-size: 5em;
+}
+
+.coucou-text {
+  -webkit-transform:rotateY(360deg) !important;
+  -moz-transform:rotateY(360deg) !important;
+  -o-transform:rotateY(360deg) !important;
+  -ms-transform:rotateY(360deg) !important;
+  font-size: 3em;
 }
 
 
