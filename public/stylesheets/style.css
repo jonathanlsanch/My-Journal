@@ -101,7 +101,7 @@
 }
 
 .bye-dot{
-  color: #8A51B7;
+  color: #8C95B0;
   font-size: 100px;
 }
 
@@ -148,6 +148,10 @@ p{
   width: 40%;
 }
 
+.bye-container {
+  text-align: center;
+}
+
 .edit-btn1 {
   font-size: 2em;
   background-color: #C88874;
@@ -184,6 +188,24 @@ p{
 .edit-div {
   margin-top: 4%;
 }
+
+.bye-btn {
+  font-size: 1em;
+  background-color: #687cb7;
+  padding: 5px 20px;
+  border-color: #687cb7;
+  border-radius: 10px;
+  color: white;
+}
+
+.bye-btn:hover {
+  margin-top: 3%;
+  background-color: #5877d3;
+  padding: 5px 20px;
+  border-color: #5877d3;
+  color: white;
+}
+
 
 .login-btn {
   font-size: 30px;
@@ -330,10 +352,12 @@ a:hover{
 
 .journal-box {
   background: #C88874;
+  border-radius: 10px;
 }
 
 .journal-box:hover {
   background: rgba(224, 121, 103, 0.5);
+  border-radius: 10px;
 }
 
 /* .book {

@@ -1,3 +1,9 @@
+<div class="collapse navbar-collapse" id="home-nav">
+    <ul class="nav navbar-nav navbar-right">
+            <form action="/logout" method="POST">
+                <button class="btn btn-link btn-logout" type="submit">logout</button>
+            </form>
+    </div>
 <div class="container-fluid">
   <div class="home-heading text-center row">
     <div class="home-heading-wrapper">
@@ -6,7 +12,7 @@
 
           </div>
 
-          <a href="/journals/new" class="new-btn" role="button">New Journal Entry</a>
+          <a href="/journals/new" class="new-btn" role="button">new journal entry</a>
   <div class="journal-row row">
       <% journals.forEach((journal) => { %>
         <div class="col-sm-3 home-journal-box">
