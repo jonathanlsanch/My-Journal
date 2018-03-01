@@ -1,0 +1,15 @@
+<%= listResults %>
+
+<div class="journal-row row">
+        <% listResults.forEach((journal) => { %>
+          <div class="col-sm-3 home-journal-box">
+            <br>
+            <div class="journal-info-wrapper journal-box">
+              <a role="button" href="/journals/<%= journal._id %>">
+                <span><%= journal.inputFormattedDate %></span>
+              </a> 
+              
+            </div>
+          </div>
+        <%  }) %>
+      </div>
