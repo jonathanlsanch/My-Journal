@@ -139,6 +139,15 @@ p{
   color: black;
 }
 
+.signup-container {
+  text-align: center;
+}
+
+.signup-form {
+  margin: 0 auto;
+  width: 40%;
+}
+
 .edit-btn1 {
   font-size: 2em;
   background-color: #C88874;
