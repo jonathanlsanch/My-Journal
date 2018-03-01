@@ -2,18 +2,6 @@
   font-family: 'Rubik', serif;
 }
 
-.main-login {
-  font-size: .5em;
-  /* background-color: rgba(209, 209, 209, 0.5); */
-  /* border-color: rgba(209, 209, 209, 0.5); */
-}
-
-.main-signup {
-  font-size: .5em;
-  /* background-color: rgba(133, 131, 170, 0.5); */
-  /* border-color: rgba(133, 131, 170, 0.5); */
-}
-
 #entry {
   height: 220px;
   width: 350px;
@@ -62,7 +50,7 @@
   border: 20px solid #494242;
   line-height: 1.5;
   overflow: auto;
-  background-image: url("../video/unnamed.png");
+  background-image: url("../images/unnamed.png");
   background-size:cover;
   background-repeat: no-repeat;
   background-position:center;
