@@ -1,13 +1,52 @@
-
-<div class="container-fluid">
-          <div class="home-heading-wrapper first-container">
-            <h1 class="header-font text-center">COUCOU<span class="header-dot">.</span></h1>
-            <div class="text-center">
-                    <p class="first-text-body">an online journal platform.</p>
-                    <div class="btn-div"><a href="/login" class="login-btn" role="button">Login</a>
+<!DOCTYPE html>
+<div class="component">
+    <ul class="align">
+        <li>
+            <figure class="book">
+                <!-- Front -->
+                <ul class="hardcover_front">
+                    <li>
+                        <div class="coverDesign blue">
                         </div>
-            </div>
-        </div>
-    </div>
-</div> 
-
+                    </li>
+                    <li class="coucou">COUCOU.<br>
+                        <span style="font-size:.3em; color:black; ">an online journal platform.</span>
+                        <br><br><span style="font-size:.2em; color:white; ">by Jonathan Sanchez.</span>
+                    </li>
+                </ul>
+                <!-- Pages -->
+                <ul class='page'>
+                    <li></li>
+                    <li>
+                        <br>
+                        <br>
+                            <form action="/login" method="post" class="form-class-login">
+                                <div class="form-group">
+                                <label for="username">username</label>
+                                <input type="text" name="username" class="form-control">
+                                </div>
+                    
+                                <div class="form-group">
+                                <label for="password">password</label>
+                                <input type="password" name="password" class="form-control">
+                                </div>
+                                <button type="submit" class="login-btn-2">Login</button>
+                                <p>not a member? <a href="/signup">sign up.</a></p>
+                            </form>
+                    </li>
+                    <li></li>
+                </ul>
+                <!-- Back -->
+                <ul class='hardcover_back'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class='book_spine'>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </figure>
+        </li>
+    </ul>
+</div>
