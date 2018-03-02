@@ -529,11 +529,6 @@ Table of Contents
 3. opening cover, back cover and pages
 4. position, transform y transition
 5. events
-6. Bonus
-	- Cover design
-	- Ribbon
-	- Figcaption
-7. mini-reset
 /////////////////////////////////////////////////////*/
 
 /*
@@ -1066,26 +1061,6 @@ Table of Contents
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
 }
 
-.yellow {
-	background-color: #f1c40f;
-	background-image: -webkit-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
-	background-image: -moz-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
-	background-image: linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
-}
-
-.blue {
-	background-color: #3498db;
-	background-image: -webkit-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-	background-image: -moz-linear-gradient(top, #3498db 58%, #2a90d4 0%);
-	background-image: linear-gradient(top, #3498db 58%, #2a90d4 0%);
-}
-
-.grey {
-	background-color: #f8e9d1;
-	background-image: -webkit-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
-	background-image: -moz-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
-	background-image: linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
-}
 
 /* Basic ribbon */
 
@@ -1171,13 +1146,19 @@ figcaption p {
 		margin: 0 auto;
 	}
 
-	figcaption {
-		text-align: center;
-		width: 320px;
-		top: 250px;
-		padding-left: 0;
-		left: -80px;
-		font-size: 90%;
-	}
-}
 
+@media screen and (max-width: 37.8125em) {
+  .large {      
+		 background: #fff;
+		 width: 100vw;
+		 height: 100vh;
+		 padding: 50px;
+		 border: 20px solid #494242;
+		 line-height: 1.5;
+		 overflow: auto;
+		 background-image: url("../images/media-background.png");
+		 background-size:cover;
+		 background-repeat: no-repeat;
+		 background-position:center;
+  }
+}
