@@ -15,7 +15,4 @@ router.get('/', ensureLoggedIn('/login'), function(req, res, next) {
     });
 });
 
-
-
-
 module.exports = router;

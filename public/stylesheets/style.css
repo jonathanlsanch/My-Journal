@@ -34,7 +34,8 @@
   color: black;
 }
 .journal-row {
-  margin-top: 3%;
+	margin-top: 3%;
+	
 }
 
 .navbar {
@@ -316,8 +317,9 @@ p{
   margin: 0 auto;
   width: 70%;
   background: rgba(209, 209, 209, 0.5);
-  padding: 5%;
-  text-align: center;
+  padding: 3%;
+	text-align: center;
+	border-radius: 10px;
 }
 
 .journal-entry {

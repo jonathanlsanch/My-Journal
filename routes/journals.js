@@ -8,46 +8,25 @@ const { ensureLoggedIn }    = require('connect-ensure-login');
 //     checkOwnership
 //   } = require('../middleware/journal-authorization');
 
-// search box and results
-router.get("/search", (req, res, next) => {
-    const searchRegex = new RegExp(req.query.userSearch, "i"); // the "i" makes it canse insensitive
-    // the .userSearch matches the name value of the search form in the layout.ejs
-    ProductModel // find products whose "name" mathces the seach term
-      .find({name: searchRegex})
-      .limit(20)
-      .exec()
-      //.exec is saying you're done defining the query; specific to Mongoose (might work without)
-      .then((searchResults) => {
-        res.locals.listOfResults = searchResults;
-        res.locals.searchTerm = req.query.userSearch;
-        res.render("product-views/search-page");
-      })
-      .catch((err) => {
-        // render the error page
-        next(err);
-      });
-  });
-
-
-// Select and filter Month journal entries
-router.get("/month-select", (req, res) => {
-    const searchTerm = req.query.monthSearch;
-    const month = req.query.value;
-    Journal
-        .find({$where : 'return this.date.getMonth() == 0'})
-        // .find(monthSearch)
-        .exec()
-        .then((searchResults) => {
-            res.locals.listResults = searchResults;
-            res.locals.searchTerm = req.query.monthSearch
-            res.render("journals/test");
-        })
-        .catch((err) => {
-            next(err);
-        }); 
-            // res.render("journals/test");
-            // res.send("test");
-});
+// // Select and filter Month journal entries
+// router.get("/month-select", (req, res) => {
+//     const searchTerm = req.query.monthSearch;
+//     const month = req.query.value;
+//     Journal
+//         .find({$where : 'return this.date.getMonth() == 0'})
+//         // .find(monthSearch)
+//         .exec()
+//         .then((searchResults) => {
+//             res.locals.listResults = searchResults;
+//             res.locals.searchTerm = req.query.monthSearch
+//             res.render("journals/test");
+//         })
+//         .catch((err) => {
+//             next(err);
+//         }); 
+//             // res.render("journals/test");
+//             // res.send("test");
+// });
 
 
 // Display Form to Create Journal

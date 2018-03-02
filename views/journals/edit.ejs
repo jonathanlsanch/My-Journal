@@ -1,89 +1,91 @@
+<!DOCTYPE html>
 <div class="collapse navbar-collapse" id="home-nav">
-        <ul class="nav navbar-nav navbar-right">
-                <form action="/logout" method="POST">
-                    <button class="btn btn-link btn-logout" type="submit">logout</button>
-                    <span><a href="/index">back to entries</a></span>
-                </form>
-        </div>
-  <div class="component">
-      <ul class="align">
-          <li>
-              <figure class='book'>
+    <div class="nav navbar-nav navbar-right">
+        <form action="/logout" method="POST">
+            <button class="btn btn-link btn-logout" type="submit">logout</button>
+            <span><a href="/index">back to entries</a></span>
+        </form>
+    </div>
+</div>
+<div class="component">
+    <ul class="align">
+        <li>
+            <figure class='book'>
 
-                  <!-- Front -->
+                <!-- Front -->
 
-                  <ul class='hardcover_front'>
-                      <li>
-                          <div class="coverDesign blue">
-                          </div>
-                      </li>
-                      <li class="coucou-text">edit.</li>
-                  </ul>
+                <ul class='hardcover_front'>
+                    <li>
+                        <div class="coverDesign blue">
+                        </div>
+                    </li>
+                    <li class="coucou-text">edit.</li>
+                </ul>
 
-                  <!-- Pages -->
+                <!-- Pages -->
 
-                  <ul class='page'>
-                      <li></li>
-                      <li>
-                          <br>
-                          <br>
-                          <form action="/journals/<%= journal._id %>" method="post">
-                            <!-- <div class="form-group">
-                                <label for="date">Date</label>
-                                <input type="date" name="date" class="form-control" value="<%= journal.date %>">
-                              </div> -->
-                            <div class="form-group">
-                              <label for="entry">Journal Entry</label>
-                              <textarea
-                                id="entry"
-                                name="entry"
-                                class="form-control">
-                                <%= journal.entry %>
-                              </textarea>
-                            </div>
-                            <div class="form-group">
-                              <label for="feeling">How Do You Feel?</label><br>
-                              <select name="feeling" id="feeling">
-                                <% types.forEach((feeling) => { %>
-                                <!-- This selects the journal's feeling in the dropdown -->
-                                  <% if (feeling === journal.feeling) { %>
-                                    <option
-                                      selected
-                                      type="text"
-                                      value="<%= feeling %>"
-                                      class="form-control">
-                                    <%= feeling %>
-                                    </option>
-                                  <% } else { %>
-                                    <option type="text" value="<%= feeling %>" class="form-control"><%= feeling %></option>
-                                  <% } %>
-                                <%  }) %>
-                              </select>
-                            </div>
-                            <div class="form-group">
-                              <button type="submit">Update Journal Entry</button>
-                            </div>
-                          </form>
-                      </li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                  </ul>
+                <ul class='page'>
+                    <li></li>
+                    <li>
+                        <br>
+                        <br>
+                        <form action="/journals/<%= journal._id %>" method="post">
+                        <!-- <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" name="date" class="form-control" value="<%= journal.date %>">
+                            </div> -->
+                        <div class="form-group">
+                            <label for="entry">Journal Entry</label>
+                            <textarea
+                            id="entry"
+                            name="entry"
+                            class="form-control">
+                            <%= journal.entry %>
+                            </textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="feeling">How Do You Feel?</label><br>
+                            <select name="feeling" id="feeling">
+                            <% types.forEach((feeling) => { %>
+                            <!-- This selects the journal's feeling in the dropdown -->
+                                <% if (feeling === journal.feeling) { %>
+                                <option
+                                    selected
+                                    type="text"
+                                    value="<%= feeling %>"
+                                    class="form-control">
+                                <%= feeling %>
+                                </option>
+                                <% } else { %>
+                                <option type="text" value="<%= feeling %>" class="form-control"><%= feeling %></option>
+                                <% } %>
+                            <%  }) %>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Update Journal Entry</button>
+                        </div>
+                        </form>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
 
-                  <!-- Back -->
+                <!-- Back -->
 
-                  <ul class='hardcover_back'>
-                      <li></li>
-                      <li></li>
-                  </ul>
-                  <ul class='book_spine'>
-                      <li></li>
-                      <li></li>
-                  </ul>
-              </figure>
-          </li>
-      </ul>
-  </div>
+                <ul class='hardcover_back'>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class='book_spine'>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </figure>
+        </li>
+    </ul>
+</div>
 
 
 <% if (typeof(errors) !== 'undefined') { %>

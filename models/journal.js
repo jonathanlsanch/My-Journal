@@ -19,6 +19,4 @@ JournalSchema.virtual('inputFormattedDate').get(function(){
     return moment(this.date).format("LL");
   });
 
-  
-
 module.exports = mongoose.model('Journal', JournalSchema);
